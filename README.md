@@ -26,17 +26,17 @@
 
 
 ## 📌 لقطة شاشة - إضافة موظف
-![إضافة موظف](screenshot/screenshot1.png)
+![إضافة موظف] (screenshot/screenshot1.PNG)
 
 ## 🗑️ لقطة شاشة - حذف موظف إلى سلة المهملات
-![حذف إلى المهملات](screenshot/screenshot2.png)
+![حذف إلى المهملات]  (screenshot/screenshot2.PNG)
 
 ## ⚠️ لقطة شاشة - حذف نهائي من سلة المهملات
-![حذف نهائي](screenshot/screenshot3.png)
+![حذف نهائي] (screenshot/screenshot3.PNG) 
 
 ## 📱 لقطة شاشة - عند تصغير الشاشة (عرض متجاوب)
-![Responsive View](screenshot/screenshot4.png)
-![Responsive View 2](screenshot/screenshot5.png)
+![Responsive View] (screenshot/screenshot4.PNG)
+![Responsive View 2] (screenshot/screenshot5.PNG)
 
 ## 📂 هيكل الملفات:
 
