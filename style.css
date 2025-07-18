@@ -1,0 +1,256 @@
+:root {
+      --primary-color: #6a1b9a;
+      --secondary-color: #f3e5f5;
+      --accent-color: #ab47bc;
+      --text-color: #2c2c2c;
+      --bg-color: #ffffff;
+      --light-color: #f9f9f9;
+      --font-family: 'Roboto', sans-serif;
+    }
+      body.dark-mode {
+      --primary-color: #452475;
+      --secondary-color: #2c2c2c;
+      --accent-color: #7b1fa2;
+      --text-color: #f5f5f5;
+      --bg-color: #1c1c1c;
+      --light-color: #382a41;
+    }
+
+     * { 
+      margin: 0;
+       padding: 0;
+        box-sizing: border-box;
+     }
+    html {
+       scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+       header {
+      background: var(--primary-color);
+      color: var(--bg-color);
+      padding: 20px;
+      position: relative;
+      text-align: center;
+    }
+     header h1{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    font-size: 1.5rem;
+     font-family: "Edu QLD Hand", cursive;}
+      header p {transition: transform 1s ease;
+animation: fadeIn 1.5s ease-in;}
+
+    .hamburger, .toggle-mode {
+      position: absolute;
+      top: 20px;
+      background: none;
+      border: none;
+      color: var(--bg-color);
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    .hamburger { 
+        display: none;
+        right: 20px; }
+    .toggle-mode {
+         left: 20px; }
+@keyframes fadeIn{
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+  .names i {
+          color: var(--accent-color);
+          margin-right:5px;
+        }
+
+       main {
+      grid-area: main;
+      display: grid;
+      gap: 20px;
+      width: 100%;
+    }
+
+     section {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      background: var(--light-color);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    section:hover { 
+      transform: translateY(-5px); }
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.input-icon ,.select-icon {
+  position: relative;
+}
+
+.input-icon i ,.select-icon i{
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+}
+
+.input-icon input ,select{
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border-radius: 6px;
+  border: 1px solid var(--bg-color);
+  font-size: 1rem;
+  resize: none;
+}
+/* option:hover{
+  background: var(--accent-color)  
+} */
+
+/* form button {
+  padding: 12px;
+  background: var(--accent-color);
+  color:var(--bg-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-content: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+} */
+   form button {
+      display: inline-block;
+      padding: 10px;
+      background: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      align-items: center;
+       gap: 8px;
+      transition: background 0.3s ease;
+    }
+
+form button:hover {
+  background: var(--primary-color);
+}
+
+ h2 {  transition: transform 0.3s ease;
+      color: var(--text-color);
+}
+
+h2:hover {
+  transform: scale(1) rotate(1deg);}
+
+@media (max-width: 768px) {
+    .hamburger{display: block;}
+}
+table {
+  
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+th, td {
+ background-color: var(--secondary-color);
+  padding: 10px;
+  border: 3px solid var(--bg-color);
+  text-align: center;
+}
+/* .counter { margin-top: 10px; font-weight: bold;} */
+.counter span{
+font-size: 1rem;
+ font-weight: 600;
+}
+#toggleTrash{
+    display: inline-block;
+      padding: 10px;
+      background: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 5px;
+      cursor: pointer;
+      align-items: center;
+       gap: 8px;
+       margin-left:10px;
+      transition: background 0.3s ease;
+     
+}
+form button i,#toggleTrash i{  margin-right:10px;}
+#toggleTrash:hover {
+  background: var(--primary-color);}
+.badge { padding: 5px 10px; border-radius: 5px; color: white; }
+    .active { background-color: green; }
+    .on-leave { background-color: orange; }
+    .terminated { background-color: red; }
+
+      .actions button {
+      margin: 2px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      color: var(--light-color);
+      cursor: pointer;
+    }
+    .actions button i {
+      margin-right: 4px;
+    }
+    .edit-btn    { background-color: #007bff; }
+    .delete-btn  { background-color: #dc3545; }
+    .restore-btn { background-color: #28a745; }
+    .forever-btn { background-color: #6c757d; }
+
+#trashSection {
+    display: none;
+}
+#scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+    }
+  footer {font-size: 1,5 rem;
+
+      color: var(--bg-color);
+      background: var(--primary-color);
+      text-align: center;
+      padding: 20px;
+     font-size: 1rem;
+     font-family: "Edu QLD Hand", cursive;}

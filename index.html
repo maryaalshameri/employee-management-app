@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <button class="toggle-mode" ><i class="fas fa-moon"></i></button>
+    <button class="hamburger" ><i class="fas fa-bars"></i></button>
+    
+     <h1>Employee Management App</h1>
+    <p class="names">
+      <i class="fas fa-plus-circle"></i> Create |
+      <i class="fas fa-eye"></i> Read |
+      <i class="fas fa-edit"></i> Update |
+      <i class="fas fa-trash-alt"></i> Soft delete |
+      <i class="fas fa-undo"></i> Restore
+    </p>
+    </header>
+    <main>
+ <section>
+  <h2>ِAdd Employee</h2>
+  <form id="add-employee">
+    <div class="input-icon">
+      <i class="fas fa-user"></i>
+      <input type="text" id="name"placeholder="Your Name" >
+    </div>
+    <div class="input-icon">
+      <i class="fas fa-briefcase"></i>
+      <input type="text" id="role" placeholder="Your job" >
+    </div>
+    <div class="select-icon"> 
+        <i class="fas fa-circle text-success"></i>
+            <select class="status" >
+      <option value="">Select Status</option>
+      <option value="Active">Active</option>
+      <option value="On Leave">On Leave</option>
+      <option value="Terminated">Terminated</option>
+       </select>
+   </div>
+    
+    <button type="submit"><i class="fas fa-paper-plane"></i> Add Employee</button>
+  </form>
+</section>
+<section>
+   
+    <h2>information Employee</h2>
+<table id="employeeTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+      <div class="counter">
+    Main List: <span id="mainCount">0</span> | Trash: <span id="trashCount">0</span>
+  </div>
+      <button id="toggleTrash" ><i class="fas fa-trash"></i>Show Trash</button>
+
+</section>
+<section id="trashSection">
+    <h2>Trash Bin</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="trashTableBody">
+
+        </tbody>
+      </table>
+</section>
+<div>  <button id="scrollToTopBtn" title="Top">↑</button></div>
+
+
+    </main>
+    <footer>
+    <p> Design by Eng:Mary Atef Abdulsalam</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
