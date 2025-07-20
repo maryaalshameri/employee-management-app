@@ -79,13 +79,14 @@ animation: fadeIn 1.5s ease-in;}
 
      section {
       width: 100%;
-      max-width: 100%;
+   
       box-sizing: border-box;
       padding: 20px;
       background: var(--light-color);
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.3s;
+      
     }
     section:hover { 
       transform: translateY(-5px); }
@@ -170,7 +171,6 @@ h2:hover {
     .hamburger{display: block;}
 }
 table {
-  
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
@@ -189,7 +189,7 @@ th, td {
 font-size: 1rem;
  font-weight: 600;
 }
-#toggleTrash{
+#toggleTrash,#moveToTrashBtn,#openFilterModal,#applyFilterBtn,#resetFilterBtn{
     display: inline-block;
       padding: 10px;
       background: var(--accent-color);
@@ -205,13 +205,15 @@ font-size: 1rem;
       transition: background 0.3s ease;
      
 }
-form button i,#toggleTrash i{  margin-right:10px;}
-#toggleTrash:hover {
+form button i,#toggleTrash i,#openFilterModal i{  margin-right:10px;}
+#toggleTrash:hover ,#moveToTrashBtn:hover ,#openFilterModal:hover,#applyFilterBtn:hover,#resetFilterBtn:hover{
   background: var(--primary-color);}
-.badge { padding: 5px 10px; border-radius: 5px; color: white; }
+    .badge { padding: 5px 10px; border-radius: 5px; color: var(--bg-color); }
     .active { background-color: green; }
     .on-leave { background-color: orange; }
     .terminated { background-color: red; }
+    .high-salary { background-color: green; margin-left: 5px; font-size: 0.8em; }
+    .bonus-badge { background-color: #b6598c; margin-left: 5px; font-size: 0.8em; }
 
       .actions button {
       margin: 2px;
@@ -228,6 +230,7 @@ form button i,#toggleTrash i{  margin-right:10px;}
     .delete-btn  { background-color: #dc3545; }
     .restore-btn { background-color: #28a745; }
     .forever-btn { background-color: #6c757d; }
+    .bonus-btn   { background-color: #b6598c; }
 
 #trashSection {
     display: none;
@@ -246,6 +249,58 @@ form button i,#toggleTrash i{  margin-right:10px;}
       display: none;
       z-index: 1000;
     }
+     .payroll-summary {
+      text-align: center;
+      font-weight: bold;
+    }
+     .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6); 
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: var(--secondary-color);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+    }
+    .modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content-filter {
+  background-color: var(--secondary-color);
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  position: relative;
+}
+.modal-content-filter input{
+ padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--bg-color);
+  margin: 10px;
+}
+.modal-content-filter select{
+  margin: 10px; 
+}
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
   footer {font-size: 1,5 rem;
 
       color: var(--bg-color);
