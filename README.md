@@ -23,16 +23,20 @@
   - `setAttribute`, `getAttribute`
   - `innerText`, `textContent`, `innerHTML`
   - `console.time()` و `console.timeEnd()`
+  - filter for table
+  - add bouns for employee (optional)
+  - delete employee where (salary<=)
 
 
 
 ## 📸 لقطة شاشة:
 
-![لقطة شاشة للتطبيق اضافه موظف](./screenshot/screenshot1.PNG)
-![ لقطة شاشة للتطبيق حدف موظف الى سله المهملات](./screenshot/screenshot2.PNG)
-![  لقطة شاشة للتطبيق حدف موظف من سله المهملات نهائيا](./screenshot/screenshot3.PNG)
-![لقطة شاشة للتطبيق عند تصغير الشاشه](./screenshot/screenshot4.PNG)
-![screenshot](./screenshot/screenshot5.PNG)
+![لقطة شاشة للتطبيق اضافه موظف](./screenshot/screenshot01.PNG)
+![ لقطة شاشة للتطبيق حدف موظف الى سله المهملات](./screenshot/screenshot02.PNG)
+![  لقطة شاشة للتطبيق حدف موظف من سله المهملات نهائيا](./screenshot/screenshot03.PNG)
+![لقطة شاشة للتطبيق عند تصغير الشاشه](./screenshot/screenshot05.PNG)
+![screenshot](./screenshot/screenshot06.PNG)
+![screenshot](./screenshot/screenshot07.PNG)
 
 
 ## 📂 هيكل الملفات:

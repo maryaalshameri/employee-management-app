@@ -27,11 +27,15 @@
   <form id="add-employee">
     <div class="input-icon">
       <i class="fas fa-user"></i>
-      <input type="text" id="name"placeholder="Your Name" >
+      <input type="text" id="name"placeholder="the Name" >
     </div>
     <div class="input-icon">
       <i class="fas fa-briefcase"></i>
-      <input type="text" id="role" placeholder="Your job" >
+      <input type="text" id="role" placeholder="the job" >
+    </div>
+    <div class="input-icon">
+      <i class="fas fa-wallet"></i>
+       <input type="number" id="salary" placeholder="the Salary">
     </div>
     <div class="select-icon"> 
         <i class="fas fa-circle text-success"></i>
@@ -47,14 +51,41 @@
   </form>
 </section>
 <section>
+
+    
+    
+    <div style="margin: 12px; text-align: center;">
+      <button  id="openFilterModal"><i class="fas fa-search"></i> Filter Employees</button>
+
+    </div>
+  <div ><input style=" padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--bg-color);" type="number" id="salaryThresholdInput" placeholder="Enter max salary to trash">
+  <button id="moveToTrashBtn">Move Salary ≤</button>
+</div>
+
+   
+  
+      
+  </section>
+
+  <section>
    
     <h2>information Employee</h2>
+    <div class="counter">
+    Main List: <span id="mainCount">0</span> | Trash: <span id="trashCount">0</span>
+  </div>
+  
+  
 <table id="employeeTable">
       <thead>
         <tr>
           <th>Name</th>
           <th>Role</th>
           <th>Status</th>
+          <th>Salary</th>
+          <th>Bonus</th>
+          <th>Total Salary</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -62,11 +93,15 @@
 
       </tbody>
     </table>
-      <div class="counter">
-    Main List: <span id="mainCount">0</span> | Trash: <span id="trashCount">0</span>
-  </div>
+   <div style="margin: 12px;">  
       <button id="toggleTrash" ><i class="fas fa-trash"></i>Show Trash</button>
-
+</div> 
+ <div class="payroll-summary">
+    Total Payroll: <span id="totalPayroll">0</span> R
+  </div>
+  <div class="payroll-summary">
+    Total Salary: <span id="totalSalary">0</span> R
+  </div>
 </section>
 <section id="trashSection">
     <h2>Trash Bin</h2>
@@ -76,6 +111,9 @@
             <th>Name</th>
             <th>Role</th>
             <th>Status</th>
+            <th>Salary</th>
+            <th>Bonus</th>
+             <th>Total Salary</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -84,7 +122,39 @@
         </tbody>
       </table>
 </section>
-<div>  <button id="scrollToTopBtn" title="Top">↑</button></div>
+<div class="modal" id="bonusModal">
+    <div class="modal-content">
+      <h2>Enter Bonus (%)</h2>
+      <input type="number" id="bonusInput" min="0" max="100">
+      <button id="saveBonusBtn">Apply</button>
+       <button id="closeBonusBtn">Cancel</button>
+      
+    </div>
+  </div>
+  <div id="filterModal" class="modal">
+  <div class="modal-content-filter">
+    <span class="close" id="closeFilterModal">&times;</span>
+    <h3>Filter by Role</h3>
+   <input type="text" id="filterName" placeholder="Name contains..." />
+    <input type="text" id="filterRole" placeholder="Role contains..." />
+    <input type="number" id="filterMinSalary" placeholder="Min Salary..." />
+     <input type="number" id="filterMinBonus" placeholder="Min Bonus..." />
+
+    <select id="filterStatus">
+      <option value="">-- Filter by Status --</option>
+      <option value="active">Active</option>
+      <option value="on leave">On Leave</option>
+      <option value="terminated">Terminated</option>
+    </select>
+
+
+    <button id="applyFilterBtn">Apply Filter</button>
+    <button id="resetFilterBtn">Reset</button>
+  </div>
+</div>
+<div>  
+  <button id="scrollToTopBtn" title="Top">↑</button>
+</div>
 
 
     </main>
