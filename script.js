@@ -246,7 +246,7 @@ const tr = button.closest("tr");
   const bonusAmount = (salaryNumber * bonusNumber) / 100;
   const totalSalary =  salaryNumber + bonusAmount;
   const bounsBadge = totalSalary >= 100000 ? '<span class="high-salary">High</span>' : '';
-  tr.querySelector(".salary-bounas").textContent = `${totalSalary.toFixed(2)} R ${bounsBadge}`;
+  tr.querySelector(".salary-bounas").innerHTML = `${totalSalary.toFixed(2)} R ${bounsBadge}`;
   tr.dataset.salarybonus = totalSalary.toFixed(2);
 
   // ✅ الحالة
